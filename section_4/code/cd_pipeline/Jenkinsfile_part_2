@@ -34,7 +34,7 @@ pipeline {
 		}
 
 		stage("Test - UAT Stage") {
-			steps { runUAT(5000) }
+			steps { runUAT2(5000) }
 		}
 	}
 }
