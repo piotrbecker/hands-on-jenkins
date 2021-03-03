@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set variables
-hostname='localhost'
+hostname=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' app_dev)
 port=$1
 
 # wait for the app to start
