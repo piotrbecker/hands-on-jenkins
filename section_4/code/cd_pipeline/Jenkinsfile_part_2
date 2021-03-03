@@ -34,7 +34,7 @@ pipeline {
 		}
 
 		stage("Test - UAT Stage") {
-			steps { runUAT(88) }
+			steps { runUAT(5000) }
 		}
 	}
 }
@@ -79,4 +79,8 @@ def runUnittests() {
 
 def runUAT(port) {
 	sh "section_4/code/cd_pipeline/tests/runUAT.sh ${port}"
+}
+
+def runUAT2(port) {
+	sh "section_4/code/cd_pipeline/tests/runUAT2.sh ${port}"
 }
